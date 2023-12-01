@@ -1,0 +1,53 @@
+@use '../../../styled/extend.scss' as *;
+nav{
+    .nav-left{
+        padding: 22px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            display: flex;
+            svg{
+                width: 40px;
+                height: 40px;
+                margin-right: 12px;
+            }
+            p{
+                color: var(--neutral-08, #010101);
+                font-size: 24px;
+                font-weight: 900;
+                line-height: 40px; /* 166.667% */
+                margin: 0;
+            }
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            color: #A6AEAD;
+        }
+    }
+    .nav-right{
+        display: flex;
+        gap: 60px;
+        padding: 22px 32px;
+        align-items: baseline;
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: baseline;
+            gap: 60px;
+            li{
+                @extend %label;
+            }
+            li:last-child{
+                padding: 12px 32px;
+                border: 1px solid black;
+            }
+        }
+        button{
+            border: none;
+            background-color: transparent;
+
+        }
+    }
+}

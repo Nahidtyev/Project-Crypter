@@ -1,0 +1,44 @@
+@use '../../../styled/extend.scss'  as *;
+@use '../../../styled/mixin.scss'  as *;
+.follower-card{
+    @include Flexible($justify:center);
+    padding: 32px 0px;
+    .col-xl-4{
+        @include Flexible($align:center,$justify:center);
+    }
+    .pp{
+        @include Flexible($justify:space-evenly);
+    }
+    img{
+        border-radius: 80px;
+        border: 1px solid var(--gradient-01, #FFE249);
+        width: 80px;
+        height: 80px;
+        padding: 4px;
+    }
+    .nm{
+        
+        color: var(--neutral-05, #686A6C);
+        @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+        p{
+            margin: 0;
+            color: #F7FBFA;
+            @include Texting($size:24px,$weight:700,$height:32px,$spacing:-0.48px);
+        }
+    }
+    .pr{
+        color: var(--neutral-05, #686A6C);
+        @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+        p{
+            color: #DBFF73;
+        }
+    }
+    button{
+        @extend %btn;
+        height: max-content;
+        padding: 12px 32px;
+        border: 2px solid var(--neutral-06, #555);
+        color: var(--neutral-02, #F1F4F4);
+        background-color: transparent;
+    }
+}

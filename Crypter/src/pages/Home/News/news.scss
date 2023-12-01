@@ -1,0 +1,80 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+#news{
+    .col-xl-6{
+        padding: 0;
+    }
+    .left{
+        background-color: #DBFF73;
+        padding: 80px;
+        height: 100%;
+        @include Flexible($justify:space-between,$direction:column);
+        h1{
+            @extend %headed;
+        }
+        p{
+            color: var(--neutral-07, #202025);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 32px; /* 160% */
+            letter-spacing: -0.4px;
+            margin-bottom: 40px;
+        }
+        span{
+            button:first-child{
+                width: 47%;
+                @extend %btn;
+                background-color: #202025;
+                color: #F7FBFA;
+                margin-right: 20px;
+            }
+            button:last-child{
+                @extend %btn;
+                width: 47%;
+            }
+        }
+    }
+    .right{
+        height: 800px;
+        background-color: #202025;
+        padding: 80px;
+        @include Flexible($justify:space-between,$direction:column);
+        h1{
+            @extend %headed;
+            color: #F7FBFA;
+        }
+        p{
+            color: var(--neutral-04, #A6AEAD);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 32px; /* 160% */
+            letter-spacing: -0.4px;
+        }
+        .sub{
+            margin-bottom: 40px;
+            span{
+                position: relative;
+                input{
+                    width: 45%;
+                    text-align: left;
+                    border-bottom: 1px solid var(--neutral-06, #555);
+                    border-right:none;
+                    padding: 16px 0;
+                    background-color: transparent
+                }
+                .icon{
+                    position: absolute;
+                    color: #686A6C;
+                    right: 10%;
+                    top: 5%
+                }
+            }
+        }
+        span{
+            button{
+                @extend %btn;
+            }
+        }
+    }
+}

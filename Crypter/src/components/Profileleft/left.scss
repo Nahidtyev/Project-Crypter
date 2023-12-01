@@ -1,0 +1,86 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+#profile-left{
+    position: relative;
+    padding: 75px 55px;
+    img{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 80px;
+        top: -132px;
+        border-radius: 256px;
+        border: 12px solid rgba(247, 251, 250, 0.25);
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat, #BDC4C4;
+    }
+    .head{
+        @include Flexible($justify:space-between);
+        margin-bottom: 40px;
+        span{
+            h1{
+                color: var(--neutral-07, #202025);
+                @include Texting($size:64px,$weight:800,$height:64px,$spacing:-1.28px);
+            }
+            span{
+                color: var(--neutral-05, #686A6C);
+                @include Texting($size:24px,$weight:700,$height:32px,$spacing:-0.48px);
+            }
+            button{
+                border: none;
+                border-radius: 12px;
+                background: var(--Accent-2, #B9A9FB);
+                padding: 8px 12px;
+                @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px)
+            }
+
+        }
+        button{
+            height: max-content;
+            margin-left: 20px;
+            color: var(--neutral-07, #202025);
+            background-color: transparent;
+            border-radius: 4px;
+            border: 2px solid var(--neutral-03, #E1E2E2);
+            padding: 12px 32px;
+            @include Texting($size:12px,$weight:800,$height:24px,$spacing:2.04px);
+            text-transform: uppercase;
+        }
+    }
+    .propeties{
+        list-style: none;
+        @include Flexible($justify:space-between);
+        li{
+            text-decoration: none !important;
+            @include Texting($size:32px,$weight:800,$height:40px,$spacing:-0.64px);
+            span{
+                color: var(--neutral-05, #686A6C);
+                @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px)
+            }
+        }
+
+    }
+    .info{
+        h1{
+            @extend %label;
+            color: var(--neutral-05, #686A6C);
+        }
+        p{
+            color: var(--neutral-05, #686A6C);
+            @include Texting($size:16px,$weight:500,$height:24px,$spacing:-0.16px)
+        }
+        .bio{
+            margin-bottom: 39px;
+        }
+        .links{
+            p{
+                color: var(--neutral-07, #202025);
+                @include Flexible($justify:space-between);
+            }
+        }
+    }
+    .social{
+        list-style: none;
+        @include Flexible($gap:24px,$direction:column);
+    }
+}

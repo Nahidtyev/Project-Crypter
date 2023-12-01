@@ -1,0 +1,27 @@
+@mixin Flexible(
+  $flex: null,
+  $direction: null,
+  $justify: null,
+  $align: null,
+  $wrap: wrap,
+  $gap: null
+) {
+  display: flex;
+  flex: $flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+@mixin Texting(
+  $size: null,
+  $weight: null,
+  $height: null,
+  $spacing: null
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  letter-spacing: $spacing;
+}

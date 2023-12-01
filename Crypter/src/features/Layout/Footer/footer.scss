@@ -1,0 +1,68 @@
+@use '../../../styled/varaible.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+@use '../../../styled/extend.scss' as *;
+
+.footer{
+        .foot-first{
+            display: flex;
+            padding: 80px 80px 20px 80px;
+            .logo{
+                display: flex;
+                svg{
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 12px;
+                }
+                p{
+                    color: var(--neutral-08, #010101);
+                    font-size: 24px;
+                    font-weight: 900;
+                    line-height: 40px; /* 166.667% */
+                    margin: 0;
+                }
+            }
+            .under-text{
+                margin-top: 20px;
+                color: var(--neutral-05, #686A6C);
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 32px; /* 160% */
+                letter-spacing: -0.4px;
+            }
+            .foot-list{
+                display: flex;
+                gap: 104px;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 32px;
+                    list-style: none;
+                    label{
+                        @extend %label;
+                    }
+                    li{
+                        @extend %texted;
+                        color: var(--neutral-05, #686A6C);
+                        .icon{
+                           margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+        .foot-last{
+            padding: 32px 80px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                color: var(--neutral-04, #A6AEAD);
+                @extend %texted;
+                button{
+                    @extend %btn-sm;
+                    margin-left: 40px;
+                }
+            }
+        }
+}

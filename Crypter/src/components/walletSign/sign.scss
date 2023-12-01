@@ -1,0 +1,51 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+#wallet-sign{
+    background: var(--neutral-08, #010101);
+    padding: 55px;
+    height: 100%;
+    @include Flexible($direction:column,$justify:center);
+    img{
+        width: 80px;
+        height: 80px;
+        margin-bottom: 50px
+    }
+    h5{
+        @extend %def-h5;
+        margin-bottom: 24px;
+    }
+    p{
+        color: var(--neutral-05, #686A6C);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px; /* 150% */
+        letter-spacing: -0.16px;
+    }
+    span{
+        margin: 20px 0;
+        button:first-child{
+            width: 47%;
+            @extend %btn;
+            background-color: transparent;
+            color: #F7FBFA;
+            margin-right: 20px;
+            border: 2px solid var(--neutral-01, #F7FBFA);
+        }
+        button:last-child{
+            @extend %btn;
+            width: 47%;
+        }
+    }
+    div{
+        @include Flexible($justify:space-between);
+        span{
+            @extend %texted;
+            font-size: 16px;
+        }
+        span:last-child{
+            color: #F7FBFA;
+            font-size: 16px;
+        }
+    }
+}

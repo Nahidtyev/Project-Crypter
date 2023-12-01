@@ -1,0 +1,45 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+#wallet-left{
+    min-height: 100vh;
+    height: 100%;
+    padding: 55px;
+    background-color: #BCE6EC;
+    @include Flexible($justify:space-between,$direction:column);
+    .logo{
+        display: flex;
+        svg{
+            width: 40px;
+            height: 40px;
+            margin-right: 12px;
+        }
+        p{
+            color: var(--neutral-08, #010101);
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 40px; /* 166.667% */
+            margin: 0;
+        }
+    }
+    .lower{
+        .curated{
+            @include Flexible($justify:space-between);
+            h1{
+                @extend %headed;
+            }
+            img{
+                width: 192px;
+                height: 72px;
+            }
+        }
+        p{
+            color: var(--neutral-07, #202025);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px; /* 133.333% */
+            letter-spacing: -0.48px;
+            margin: 0;
+        }
+    }
+}

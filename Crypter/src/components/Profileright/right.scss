@@ -1,0 +1,54 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+#profile-right{
+    overflow: hidden;
+    border-left: 1px solid var(--neutral-03, #E1E2E2);
+    background: var(--neutral-08, #010101);
+    .secs{
+        padding: 0;
+        list-style: none;
+        @include Flexible($justify:space-between,);
+        li:first-child{
+            color: var(--neutral-01, #F7FBFA);
+        }
+        li{
+            text-align: center;
+            border-bottom: 1px solid var(--neutral-07, #202025);
+            padding: 28px 52px;
+            color: var(--neutral-05, #686A6C);
+            @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+            button{
+                margin-left: 8px;
+                padding: 2px 8px;
+                border-radius: 8px;
+                @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+            }
+            button:first-child{
+                background: var(--Accent-4, #DBFF73);
+            }
+            button:nth-child(2){
+                background: var(--Accent-4, #B9A9FB);
+            }
+            button:last-child{
+                background: var(--Accent-4, #FFA6D6);
+            }
+        }
+    }
+    .filter{
+        margin: 32px 0;
+        padding: 0 55px;
+        @include Flexible($justify:space-between);
+        span{
+            color: var(--neutral-01, #F7FBFA);
+            @include Flexible($gap:12px);
+            @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+        }
+    }
+    .row{
+        padding: 0 55px;
+        .carding{
+            @include Flexible($align:center,$direction:column);
+        }
+    }
+}

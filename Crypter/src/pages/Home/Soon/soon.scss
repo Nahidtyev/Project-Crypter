@@ -1,0 +1,36 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+#soon{
+    max-height: 1200px;
+    overflow: hidden;
+    .col-xl-6{
+        padding: 0;
+    }
+    .soon-left{
+        @include Flexible($justify:space-between,$direction:column);
+        height: 1200px;
+        padding: 80px;
+        background-color: #B9A9FB;
+        h1{
+            @extend %headed;
+        }
+        button{
+            border: none;
+            @extend %btn;
+            button{
+                border:none;
+                margin-left: 12px;
+                padding: 2px 8px ;
+                border-radius: 12px;
+                background: var(--neutral-03, #E1E2E2);
+                color: var(--neutral-07, #202025);
+                font-size: 12px;
+                font-weight: 800;
+                line-height: 24px; /* 200% */
+                letter-spacing: 2.04px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

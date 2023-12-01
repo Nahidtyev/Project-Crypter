@@ -1,0 +1,47 @@
+@use '../../../../styled/extend.scss' as*;
+@use '../../../../styled/mixin.scss' as *;
+.card-soon{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 58.37%, rgba(0, 0, 0, 0.85) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 800px;
+        height:800px;
+    }
+    .content{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        padding: 52px;
+        height: 100%;
+        @include Flexible($direction:column,$justify:space-between);
+        .lower{
+            @include Flexible($justify:space-between);
+            .text{
+                p{
+                    @extend %def-p;
+                    color: #F7FBFA
+                }
+                h5{
+                    @extend %def-h5;
+                    color: #F7FBFA
+                }
+            }
+            .date{
+                p{
+                    @extend %def-p;
+                    color: #F7FBFA
+                }
+                h5{
+                    @extend %def-h5;
+                    color: #F7FBFA;
+                    ul{
+                        padding: 0;
+                        list-style: none;
+                        @include Flexible($gap:32px);
+                    }
+                }
+            }
+        }
+    }
+}

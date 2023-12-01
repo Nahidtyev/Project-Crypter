@@ -1,0 +1,40 @@
+@use '../../../../styled/mixin.scss' as *;
+@use '../../../../styled/extend.scss' as *;
+
+.card-block{
+    .arts{
+        @include Flexible($gap:8px);
+        img{
+            object-fit: cover;
+            border-radius: 16px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;            
+        }
+        img:first-child{
+            width: 400px;
+            height: 400px;
+        }
+    }
+    .lower{
+        @include Flexible($justify:space-between);
+        h6{
+            color: #202025;
+            @include Texting($size:24px,$weight:700,$height:32px,$spacing:-0.48px)
+        }
+        img{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 12px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        }
+        p{
+            @extend %def-p;
+            color: #202025
+        }
+        span{
+            @extend %def-p;
+            color: #686A6C;
+            @include Flexible()
+        }
+    }
+}

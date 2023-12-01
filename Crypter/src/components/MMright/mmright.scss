@@ -1,0 +1,55 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+.mm-right{
+    background-color: black;
+    @include Flexible($justify:end,$direction:column);
+    height: 100%;
+    .quick-links{
+        div{
+            @include Flexible($justify:space-between,$align:center);
+            @extend %def-h5;
+            font-size: 30px;
+            padding: 28px 40px ;
+            span:hover{
+                cursor: pointer;
+                background: var(--gradient-01, conic-gradient(from 180deg at 50% 50%, #FFE249 22.225085645914078deg, #F35950 78.13612282276154deg, #7C5BFF 158.9999771118164deg, #1CE4FF 202.3224377632141deg, #5FFF5C 341.3397216796875deg));
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .arr-icon{
+                color: #555555;
+                transition: 0.3s;
+                   &:hover{
+                    color: #F7FBFA;
+                    padding-left: 10px;
+                }
+            }
+        }
+        hr{
+            margin: 0;
+            color: #A6AEAD;
+        }
+    }
+    .download{
+        padding: 50px 70px;
+        h3{
+            @include Texting($size:32px,$weight:800,$height:40px,$spacing:-0.64px);
+            color: var(--neutral-04, #A6AEAD);
+            margin-bottom: 30px;
+        }
+        span{
+            button:first-child{
+                width: 47%;
+                @extend %btn;
+                background-color: #202025;
+                color: #F7FBFA;
+                margin-right: 20px;
+            }
+            button:last-child{
+                @extend %btn;
+                width: 47%;
+            }
+        }
+    }
+}

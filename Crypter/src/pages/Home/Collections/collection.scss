@@ -1,0 +1,13 @@
+@use '../../../styled/mixin.scss' as *;
+@use '../../../styled/extend.scss' as *;
+#collections{
+    padding: 40px 0;
+    .heading{
+        h1{
+            @extend %headed;
+        }
+    }
+    .carding{
+        @include Flexible();
+    }
+}

@@ -1,0 +1,23 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+.mm-left{
+    @include Flexible($direction:column,$justify:end);
+    background: var(--Accent-2, #B9A9FB);
+    padding: 40px;
+    height: 100vh;
+    h1{
+        color: var(--neutral-08, #010101);
+        @extend %headed;
+        margin-bottom: 30px;
+    }
+    .media{
+        @include Flexible($gap:10px);
+        button{
+            border-radius: 12px;
+            background: var(--neutral-01, #F7FBFA);
+            padding: 16px 56px;
+            height: max-content;
+            border: none;
+        }
+    }
+}

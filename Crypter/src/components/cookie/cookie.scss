@@ -1,0 +1,17 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+.cookie{
+    width: 100%;
+    border: none;
+    @include Flexible($justify:space-between);
+    border-radius: 12px;
+    background: var(--opacity-0750, rgba(32, 32, 37, 0.50));
+    padding: 16px 24px;
+    span{
+        color: var(--neutral-05, #686A6C);
+        @extend %texted;
+    }
+    .dif{
+        color: var(--neutral-02, #F1F4F4);
+    }
+}

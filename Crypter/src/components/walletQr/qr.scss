@@ -1,0 +1,42 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+#wallet-qr{
+    background: var(--neutral-08, #010101);
+    padding: 55px;
+    height: 100%;
+    @include Flexible($justify:space-between,$direction:column);
+    .head{
+        h5{
+            @extend %def-h5;
+            margin-bottom: 40px;
+        }
+        .qr{
+            
+            margin: 0 auto;
+            width: 90%;
+            @include Flexible($justify:center,$align:center);
+            padding: 122px;
+            border-radius: 32px;
+            background: var(--opacity-0750, rgba(32, 32, 37, 0.50));
+            img{
+                width: 176px;
+                height: 176px;
+            }
+        }
+        .under{
+            color: #686A6C;
+            @include Flexible($align:center,$direction:column);
+            margin: 40px 0;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px; /* 150% */
+            letter-spacing: -0.16px;
+            span{
+                color: #F7FBFA;
+            }
+            p{
+                margin: 0;
+            }
+        }
+    }
+}

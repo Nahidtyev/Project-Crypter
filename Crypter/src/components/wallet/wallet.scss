@@ -1,0 +1,56 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+#wallet{
+    background: var(--neutral-08, #010101);
+    padding: 55px;
+    height: 100%;
+    @include Flexible($justify:space-between,$direction:column);
+    .head{
+        h5{
+            @extend %def-h5;
+        }
+        .coins{
+            list-style: none;
+            @include Flexible();
+            li{
+                padding: 16px 32px;
+            }
+        }
+        .links{
+            padding: 0;
+            list-style: none;
+            li{
+                .wallets{
+                    width: 100%;
+                    text-align: left;
+                    background-color: #010101;
+                    color: var(--neutral-03, #E1E2E2);
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                    line-height: 32px; /* 133.333% */
+                    letter-spacing: -0.48px;
+                    padding: 20px 32px;
+                    border-radius: 12px;
+                    border: 2px solid var(--neutral-07, #202025);
+                    img{
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+        .scan-link{
+            @include Flexible($justify:center);
+            color: var(--neutral-01, #F7FBFA);
+            span{
+                margin-left: 16px;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px; /* 150% */
+                letter-spacing: -0.16px;
+            }
+        }
+    }
+}

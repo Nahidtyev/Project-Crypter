@@ -1,0 +1,39 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+.created-card{
+    max-width: 260px;
+    img{
+        margin-bottom:20px ;
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 20px;
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    }
+    .pro{
+        @include Flexible($justify:space-between,$align:end);
+        span{
+            h6{
+                margin: 0;
+                color: var(--neutral-01, #F7FBFA);
+                @include Texting($size:24px,$weight:700,$height:32px,$spacing:-0.48px);
+            }
+            p{
+                margin: 0;
+                color: var(--neutral-05, #686A6C);
+                @include Texting($size:14px,$weight:700,$height:20px,$spacing:-0.28px);
+            }
+            span{
+                color: var(--Accent-4, #DBFF73);
+                @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+            }
+            img{
+                width: 32px;
+                height: 32px;
+                border-radius: 32px;
+                background: url(<path-to-image>), lightgray 50% / cover no-repeat, #B1B5B1;
+            }
+        }
+    }
+}

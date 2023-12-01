@@ -1,0 +1,20 @@
+.profile-card{
+    button{
+        border-radius: 12px;
+        background: var(--neutral-07, #202025);
+        padding: 12px;
+        color: var(--neutral-01, #F7FBFA);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 36px; /* 200% */
+        letter-spacing: -0.18px;
+        border: none;
+        img{
+            background-color: #A6AEAD;
+            border-radius: 10px;
+            width: 40px;
+            height: 40px;
+            margin-right: 16px;
+        }
+    }
+}

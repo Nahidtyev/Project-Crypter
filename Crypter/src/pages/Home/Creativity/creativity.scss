@@ -1,0 +1,56 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+#creativity{
+    .row{
+        @include Flexible($justify:space-between);
+    }
+    padding: 128px 80px;
+    .heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 21px;
+        text-align: center;
+        h1{
+            @extend %headed;
+        }
+        p{
+            max-width: 784px;
+            color: var(--neutral-05, #686A6C);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32px; /* 133.333% */
+            letter-spacing: -0.48px;
+        }
+    }
+    .line{
+        margin: 40px 0;
+        @include Flexible($gap:80px);
+        .imaging{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 32px;
+            background: #C3CAD4;
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+        .info{
+            h1{
+                font-size: 64px;
+                line-height: 64px;
+                letter-spacing: -1.28px;
+                @extend %headed;
+            }
+            p{
+                @extend %texted;
+            }
+            button{
+                @extend %btn-sm;
+            }
+        }
+    }
+}
