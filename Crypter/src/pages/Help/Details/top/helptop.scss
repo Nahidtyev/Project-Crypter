@@ -1,0 +1,33 @@
+@use '../../../../styled/extend.scss' as *;
+@use '../../../../styled/mixin.scss' as *;
+.help-top{
+    padding: 60px;
+    text-align: center;
+    @include Flexible($justify:center);
+    height: 400px;
+    position: relative;
+    img{
+        position: absolute;
+        z-index: -1;
+        filter: brightness(50%);
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover
+    }
+    h1{
+        margin-top: 5%;
+        width: 60%;
+        @extend %headed;
+        color:#F7FBFA;
+        span{
+            @extend %def-p2;
+            button{
+                border: none;
+                background-color: transparent;
+                color: #F7FBFA;
+            }
+        }
+    }
+}

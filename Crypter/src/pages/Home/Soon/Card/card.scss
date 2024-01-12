@@ -27,21 +27,6 @@
                     color: #F7FBFA
                 }
             }
-            .date{
-                p{
-                    @extend %def-p;
-                    color: #F7FBFA
-                }
-                h5{
-                    @extend %def-h5;
-                    color: #F7FBFA;
-                    ul{
-                        padding: 0;
-                        list-style: none;
-                        @include Flexible($gap:32px);
-                    }
-                }
-            }
         }
     }
 }

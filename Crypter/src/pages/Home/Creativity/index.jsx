@@ -13,7 +13,7 @@ const Creativity = () => {
                     <h1>Own your creativity.</h1>
                     <p>Each web3 community is unique and deserves a custom marketplace with its own look, features, fees.</p>
                 </div>
-                <div className="line">
+                <div className="row line">
                     <div className="col-xl-6">
                         <div className="imaging">
                             <img src={collect} alt="" />

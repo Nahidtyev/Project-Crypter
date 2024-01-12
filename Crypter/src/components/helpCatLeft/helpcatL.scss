@@ -1,0 +1,17 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.help-cat-left{
+    height: 100%;
+    background-color: #B9A9FB;
+    padding: 60px;
+    h1{
+        @extend %headed;
+        max-width: 60%;
+        margin-bottom: 60px;
+    }
+    img{
+        max-width: 450px;
+        max-height: 450px;
+    }
+}

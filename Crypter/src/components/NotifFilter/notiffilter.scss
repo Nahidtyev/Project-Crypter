@@ -1,0 +1,42 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.notif-filter{
+    padding: 65px;
+    h1{
+        padding: 0;
+        margin-bottom: 32px;
+        color: #202025;
+        @include Texting($size:32px,$weight:700,$height:40px,$spacing:-0.64px);
+    }
+    .cats{
+        margin-bottom: 32px;
+            span{
+                margin-bottom: 32px;
+                input {
+                    margin-right: 10px;
+                    border-radius: 8px;
+                    width: 32px;
+                    height: 32px;
+                    fill: var(--Neutral-01, #F7FBFA);
+                    stroke-width: 2px;
+                    stroke: var(--Neutral-03, #E1E2E2);
+                    transition: 0.3s;
+                    &:checked{
+                        background-color: #202025
+                    }
+                }
+                label{
+                    @extend %def-p;
+                    color: #202025;
+                }
+            }
+    }
+    .slcts{
+        @include Flexible($justify:space-between);
+        button{
+            @extend %btn;
+            width: 48%;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+.bging{
+    nav{
+        background-color: #F7FBFA;
+        position: static;
+        border-bottom: 1px solid #E1E2E2;
+        width: 100%;
+        .nav-left{
+            padding: 22px 32px 14px 32px;
+            display: flex;
+            @include Flexible($align:center,$justify:space-between);
+            .logo{
+                display: flex;
+                svg{
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 12px;
+                }
+                p{
+                    color: #202025;
+                    font-size: 24px;
+                    font-weight: 900;
+                    line-height: 40px; /* 166.667% */
+                    margin: 0;
+                }
+            }
+            button{
+                border: none;
+                background-color: transparent;
+                color: #202025;
+            }
+        }
+        .nav-right{
+            @include Flexible($align:baseline);
+            gap: 60px;
+            padding: 22px 32px 0px 32px;
+            ul{
+                margin: 0;
+                list-style: none;
+                @include Flexible($gap:30px);
+                align-items: baseline;
+                position: relative;
+                .dropping{
+                    width: 300px;
+                    @include Flexible($gap:0,$direction:column);
+                    padding: 0;
+                    position: absolute;
+                    right: 39%;
+                    top: 58px;
+                    border-radius: 20px;
+                    border: 1px solid var(--neutral-03, #E1E2E2);
+                    background: var(--neutral-01, #F7FBFA);
+                    box-shadow: 0px 32px 48px -16px rgba(0, 0, 0, 0.10);
+                    li{
+                        // color: #F7FBFA;
+                        width: 100%;
+                        @include Flexible($justify:space-between);
+                        padding: 24px 32px;
+                        border-bottom: 1px solid var(--neutral-03, #E1E2E2);
+                        @include Texting($size:20px,$weight:700,$height:32px,$spacing:-0.4);
+                    }
+                }
+                .li1{
+                    color:#202025 ;
+                    cursor: pointer;
+                    @extend %label;
+                    button{
+                        border-radius: 48px;
+                        background: var(--neutral-01, #F7FBFA);
+                        border: none;
+                        padding: 12px;
+                    }
+                }
+                .li2{
+                    cursor: pointer;
+                    border-radius: 32px;
+                    overflow: hidden;
+                    border: 2px solid var(--opacity-0150, rgba(247, 251, 250, 0.50));
+                    background-color:  #BDE5C1;
+                    img{
+                        width: 48px;
+                        height: 48px;
+                        object-fit: cover;
+                    }
+                }
+                .li3{
+                    position: relative;
+                    .pp-dropdown{
+                        position: absolute;
+                    }
+                }
+                .crt{
+                    padding: 12px 32px;
+                    border: 1px solid #202025;
+                }
+            }
+        }
+    }
+}

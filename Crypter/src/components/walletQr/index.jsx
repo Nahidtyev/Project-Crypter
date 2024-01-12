@@ -1,6 +1,7 @@
 import React from 'react'
 import qr from '../../assets/Wallet/barcode-qr 1.png'
 import Cookie from '../cookie'
+import {Link} from 'react-router-dom'
 import './qr.scss'
 
 const WalletQr = () => {
@@ -13,7 +14,7 @@ const WalletQr = () => {
             </div>
             <div className='under'>
                 <p>Powered by UI8</p>
-                <span>Don’t have a wallet app?</span>
+                <span><Link to={'/wallet'}>Don’t have a wallet app?</Link></span>
             </div>
         </div>
         <Cookie/>

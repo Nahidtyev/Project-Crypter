@@ -1,0 +1,44 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+.activity-right{
+    height:max-content;
+    padding: 60px;
+    #c1{
+        object-fit: cover;
+        // width: 550px;
+        height: 500px;
+        border-radius: 20px;
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    }
+    .date{
+        margin: 20px 0;
+        @extend %def-h5;
+        color: #202025;
+        @include Flexible($justify:space-between);
+        sup{
+            color: #686A6C;
+            @extend %def-p2;
+            font-size: 20px;
+            letter-spacing: -0.4px;
+        }
+    }
+    .sm-block{
+        @include Flexible($align:center);
+        #img2{
+            margin-right: 10px;
+            object-fit: cover;
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        }
+        p{
+            margin: 0;
+            @extend %def-plight;
+            span{
+                @extend %texted;
+            }
+        }
+    }
+}

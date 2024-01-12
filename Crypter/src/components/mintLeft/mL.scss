@@ -1,0 +1,67 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.mint-left{
+    height: 100%;
+    background: var(--Neutral-01, #F7FBFA);
+    padding: 60px;
+    position: relative;
+    .back{
+        position: absolute;
+        right: 8%;
+        border-radius: 60px;
+        border: 2px solid var(--Neutral-03, #E1E2E2);
+        padding: 12px;
+    }
+    .top{
+        h1{
+            @extend %headed;
+        }
+        p{
+            color: #686A6C;
+            @extend %def-p2;
+        }
+        ul{
+            margin-top: 52px;
+            list-style: none;
+            padding: 0;
+            li{
+                margin-bottom: 60px;
+                input{
+                    outline: none;
+                    width: 100%;
+                    border: none;
+                    background: transparent;
+                    @include Texting($size:20px,$weight:700,$height:32px,$spacing:-0.4px);
+                }
+                position: relative;
+                .icn{
+                    position: absolute;
+                    right: 0;
+                }
+                hr{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .bottom{
+        span{
+            @extend %def-p2;
+            font-size: 20px;
+            letter-spacing: -0.4px;
+        }
+        button{
+            width: 48%;
+        }
+        button:first-child{
+            margin-right: 20px;
+            @extend %btn;
+        }
+        button:last-child{
+            @extend %btn;
+            background-color: #202025;
+            color: #F7FBFA;
+        }
+    }
+}

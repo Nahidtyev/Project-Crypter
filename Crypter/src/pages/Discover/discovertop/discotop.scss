@@ -1,0 +1,75 @@
+@use '../../../styled/extend.scss' as*;
+@use '../../../styled/mixin.scss' as*;
+
+#discover-top{
+    padding: 0;
+    .main-div{
+        @include Flexible($justify:space-between,$align:end);
+        width: 100%;
+        height: 700px;
+        position: relative;
+        padding: 60px 60px 0 60px;
+        img{
+            filter: brightness(80%);
+            z-index: -1;
+            left: 0;
+            position: absolute;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .left{
+            margin-bottom: 60px;
+            .nam{
+                margin-bottom: 30px;
+                @include Flexible($justify:space-between);
+                h1{
+                    color: #F7FBFA;
+                    @extend %headed;
+                }
+                span{
+                    border-radius: 12px;
+                    background: var(--neutral-07, #202025);
+                    padding: 12px;
+                    color: var(--neutral-01, #F7FBFA);
+                    @extend %def-p;
+                    border: none;
+                    img{
+                        position: static;
+                        z-index: 1;
+                        background-color: #A6AEAD;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 16px;
+                    }
+                }
+            }
+            button{
+                width: 250px;
+                @extend %btn;
+            }
+            button:first-child{
+                margin-right: 20px;
+                background: transparent;
+                border: 2px solid var(--Neutral-01, #F7FBFA);
+                color: #F7FBFA;
+            }
+        }
+        .date-timer{
+            padding: 16px 30px;
+            border-radius: 24px;
+            background: var(--Neutral-01, #F7FBFA);
+            box-shadow: 0px 16px 40px -8px rgba(0, 0, 0, 0.12);
+            margin-bottom: 50px;
+            .date{
+                ul{
+                    margin-bottom: 0;
+                }
+            }
+            h5,p{
+                color: #202025;
+            }
+        }
+    }
+}

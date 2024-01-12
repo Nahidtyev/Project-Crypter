@@ -3,7 +3,7 @@ import Card from './Card'
 import './soon.scss'
 import frame from '../../../assets/home/Frame.png'
 import frame1 from '../../../assets/home/Frame1.png'
-
+import {Link} from 'react-router-dom'
 const Soon = () => {
   return (
     <div id="soon">
@@ -12,7 +12,7 @@ const Soon = () => {
                 <div className="col-xl-6 ">
                     <div className="soon-left">
                         <h1>Auctions ending soon</h1>
-                        <button>explorer more <button>109</button></button>
+                        <button><Link to={'/discover'}>explorer more <button>109</button></Link></button>
                     </div>
                 </div>
                 <div className="col-xl-6">

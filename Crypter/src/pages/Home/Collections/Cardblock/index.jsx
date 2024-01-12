@@ -11,7 +11,7 @@ const Cardblock = ({name,image1,image2,image3,price,owner}) => {
                     <img src={urlFor(image1)} className='col-xl-12' alt="" />
                     <img src={urlFor(image2)} className='col-xl-4' alt="" />
                     <img src={urlFor(image3)} className='col-xl-4' alt="" />
-                <div className="col-xl-4"></div>
+                    <div className="col-xl-4 idle"></div>
                 </div>
                 <div className="lower">
                     <div>

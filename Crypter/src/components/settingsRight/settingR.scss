@@ -1,0 +1,125 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.setting-right{
+    background: var(--Neutral-02, #F7FBFA);
+    padding: 50px;
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            padding: 16px 0;
+            span{
+                @include Flexible($justify:space-between);
+                input{
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    @include Texting($size:20px,$weight:700px,$height:32px,$spacing:-0.4px);
+                }
+                p{
+                    @include Texting($size:20px,$weight:700px,$height:32px,$spacing:-0.4px);
+                }
+            }
+            label{
+                color: #A6AEAD;
+                @extend %label;
+            }
+        }
+    }
+    .wallet-link{
+        label{
+            @extend %label;
+            color: #A6AEAD;
+            margin-bottom: 20px;
+        }
+        .link-detail{
+            margin-bottom: 20px;
+            @include Flexible($justify:space-between,$align:center);
+            .link-cyrpto{
+                @include Flexible($justify:space-between,$align:center);
+                p{
+                    margin: 0;
+                    @include Texting($size:20px,$weight:700px,$height:32px,$spacing:-0.4px);
+                   span{
+                    @include Texting($size:14px,$weight:700px,$height:20px,$spacing:-0.28px);
+                   }
+                }
+                .cyrpto-icn{
+                    margin-right: 20px;
+                    padding: 12px;
+                    border: none;
+                    color: #E1E2E2;
+                    border-radius: 64px;
+                    background: var(--Accent-1-shade-2, #1966F7);
+                }
+            }
+            .exit-icn{
+                height: max-content;
+                padding: 18px;
+                max-width: max-content;
+                border-radius: 60px;
+                border: 2px solid var(--Neutral-03, #E1E2E2);
+            }
+        }
+        button:last-child{
+            width: 100%;
+            @extend %btn;
+        }
+    }
+    .notif-btns{
+        li{
+            hr{
+                margin-bottom: 0;
+            }
+            span{
+                p{
+                    @include Texting($size:20px,$weight:700px,$height:32px,$spacing:-0.4px);
+                    span{
+                        color: #A6AEAD;
+                        @include Texting($size:14px,$weight:700px,$height:20px,$spacing:-0.28px);
+                    }
+                }
+                .toogle{
+                    input[type=checkbox]{
+                        height: 0;
+                        width: 0;
+                        visibility: hidden;
+                    }
+                    
+                    label {
+                        cursor: pointer;
+                        text-indent: -9999px;
+                        width: 64px;
+                        height: 32px;
+                        background: grey;
+                        display: block;
+                        border-radius: 8px;
+                        position: relative;
+                    }
+                    
+                    label:after {
+                        content: '';
+                        position: absolute;
+                        top: 4.3px;
+                        left: 5px;
+                        width: 24px;
+                        height: 24px;
+                        background: #fff;
+                        border-radius: 4px;
+                        transition: 0.3s;
+                    }
+                    
+                    input:checked + label {
+                        background: #1966F7;
+                    }
+                    
+                    input:checked + label:after {
+                        left: calc(100% - 5px);
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+        }
+    }
+}

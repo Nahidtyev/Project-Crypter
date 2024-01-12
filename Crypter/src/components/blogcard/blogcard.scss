@@ -1,0 +1,69 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+.blog-card{
+    .left{
+        overflow: hidden;
+        position: relative;
+        transition: 0.4s;
+        img{
+            width: 700px;
+            height: 700px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+        button{
+            visibility: hidden;
+            border: none;
+            position: absolute;
+            left: 35%;
+            top: 45%;
+            @extend %btn;
+            background-color: #202025;
+            color: #E1E2E2;
+        }
+        &:hover button{
+            visibility: visible;
+        }
+        &:hover img{
+            filter: blur(9px);
+        }
+    }
+    .right{
+        height: 100%;
+        @include Flexible($justify:space-between);
+        padding: 60px;
+        .top{
+            h1{
+                @extend %headed;
+            }
+            span{
+                @include Flexible($align:center);
+                button{
+                    margin-right: 10px;
+                    border: none;
+                    height: max-content;
+                    border-radius: 80px;
+                    padding: 6px 5.5px 6px 6.5px;
+                    background: var(--Neutral-03, #E1E2E2);
+                    svg{
+                        width: 38px;
+                        height: 38px;
+                    }
+                }
+                p{
+                    color: #202025;
+                    @extend %def-p;
+                    span{
+                        color: #686A6C;
+                        @extend %texted;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        p{
+            height: max-content;
+            @include Texting($size:20px,$weight:500,$height:32px,$spacing:-0.4px);
+        }
+    }
+}

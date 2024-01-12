@@ -7,10 +7,7 @@
     }
     padding: 128px 80px;
     .heading{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 21px;
+        @include Flexible($align:center,$direction:column,$gap:21px);
         text-align: center;
         h1{
             @extend %headed;
@@ -18,19 +15,14 @@
         p{
             max-width: 784px;
             color: var(--neutral-05, #686A6C);
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 32px; /* 133.333% */
-            letter-spacing: -0.48px;
+            @extend %def-p2;
         }
     }
     .line{
         margin: 40px 0;
-        @include Flexible($gap:80px);
+        @include Flexible();
         .imaging{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include Flexible($justify:center,$align:center);
             border-radius: 32px;
             background: #C3CAD4;
             img{
@@ -39,6 +31,7 @@
             }
         }
         .info{
+            padding: 20px 40px;
             h1{
                 font-size: 64px;
                 line-height: 64px;

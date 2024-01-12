@@ -1,8 +1,9 @@
+@use '../styled/mixin.scss' as *;
 %headed{
     color: var(--neutral-07, #202025);
-    font-size: 65px;
+    font-size: 60px;
     font-weight: 800;
-    line-height: 80px; /* 100% */
+    line-height: 60px; /* 100% */
     letter-spacing: -1.6px;
 }
 %texted{
@@ -52,10 +53,47 @@
     line-height: 36px; /* 200% */
     letter-spacing: -0.18px;
 }
+%def-p2{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px; 
+    letter-spacing: -0.48px;
+}
+%def-plight{
+    @include Texting($size:16px,$weight:700px,$height:24px,$spacing:-0.16px);
+}
+%def-ptexting{
+    @include Texting($size:20px,$weight:500px,$height:32px,$spacing:-0.4px);
+    color: #686A6C;
+}
 %def-h5{
     color: var(--neutral-01, #F7FBFA);
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 800;
-    line-height: 48px; /* 100% */
+    line-height: 40px; /* 100% */
     letter-spacing: -0.96px;
+}
+%topped{
+    h1{
+        max-width: 75%;
+        @extend %headed;
+        margin-bottom: 20px;
+    }
+    span{
+        color: #686A6C;
+        @extend %def-p2;
+    }
+    p{
+        margin-top: 50px;
+        max-width: 75%;
+        color: #686A6C;
+        @include Texting($size:20px,$weight:500,$height:32px,$spacing:-0.4px);
+    }
+}
+%backbtn{
+    position: absolute;
+        right: 8%;
+        border-radius: 60px;
+        border: 2px solid var(--Neutral-03, #E1E2E2);
+        padding: 12px;
 }

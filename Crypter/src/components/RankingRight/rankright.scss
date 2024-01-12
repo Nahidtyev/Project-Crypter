@@ -1,0 +1,27 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.ranking-right{
+    background-color: #f1f4f4;
+    .filters{
+        padding: 60px 40px 40px;
+        @include Flexible($align:end);
+        button{
+            @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+            color: #686A6C;
+            background-color: transparent;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 40px;
+            transition: background-color 0.3s, color 0.3s; /* 0.3 saniyə tranzisiya effekti */
+            cursor: pointer;
+        }
+        button.active {
+            background-color: #000000;
+            color: rgb(235, 235, 235);
+        }
+        button:nth-child(2){
+            margin-right: 30px;
+        }
+    }
+}

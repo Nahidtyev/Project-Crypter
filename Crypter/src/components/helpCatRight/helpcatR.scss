@@ -1,0 +1,35 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.help-cat-right{
+    padding: 60px;
+    background-color: #F7FBFA;
+    ul{
+        padding: 0;
+        list-style: none;
+        .first-li{
+            @include Flexible($justify:space-between,$align:center);
+            label{
+                color: #202025;
+                @extend %def-h5;
+                font-size: 32px;
+                letter-spacing: -0.64px;
+            }
+            .icn{
+                color: #1966F7;
+            }
+        }
+    }
+    hr{
+        margin-bottom: 50px;
+    }
+    .search-bar{
+        width: 100%;
+        @include Flexible($justify:space-between);
+        input{
+            outline: none;
+            border: none;
+            background-color: transparent;
+        }
+    }
+}

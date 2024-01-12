@@ -1,0 +1,13 @@
+@use '../../styled/extend.scss' as *;
+.mint-right{
+    padding: 60px;
+    background: var(--Neutral-02, #F1F4F4);
+    h1{
+        color: #202025;
+        @extend %def-h5;
+        margin-bottom: 30px;
+    }
+    .activity-right{
+        padding: 0;
+    }
+}

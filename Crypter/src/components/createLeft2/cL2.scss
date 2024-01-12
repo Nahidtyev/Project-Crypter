@@ -1,0 +1,55 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.create-left2{
+    background: var(--Neutral-01, #F7FBFA);
+    padding: 50px;
+    height: 100%;
+    @include Flexible($direction:column,$justify:space-between);
+    position: relative;
+    .back{
+        position: absolute;
+        right: 8%;
+        border-radius: 60px;
+        border: 2px solid var(--Neutral-03, #E1E2E2);
+        padding: 12px;
+    }
+    h1{
+        max-width: 75%;
+        @extend %headed;
+    }
+    p{
+        max-width: 75%;
+        color: #686A6C;
+        @extend %def-p2;
+    }
+    ul{
+        margin-top: 52px;
+        list-style: none;
+        padding: 0;
+        li{
+            margin-bottom: 60px;
+            input{
+                outline: none;
+                width: 100%;
+                border: none;
+                background: transparent;
+                @include Texting($size:20px,$weight:700,$height:32px,$spacing:-0.4px);
+            }
+            position: relative;
+            .icn{
+                position: absolute;
+                right: 0;
+            }
+            hr{
+                margin-top: 10px;
+            }
+        }
+    }
+    .continue{
+        width: 100%;
+        @extend %btn;
+        background-color: #202025;
+        color: #F7FBFA;
+    }
+}

@@ -1,0 +1,11 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+#blog{
+    .loads{
+        margin: 40px 0;
+        @include Flexible($justify:center);
+        button{
+            @extend %btn;
+        }
+    }
+}

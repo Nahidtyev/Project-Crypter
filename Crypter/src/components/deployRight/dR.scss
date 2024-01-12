@@ -1,0 +1,58 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.deploy-right{
+    height: 100%;
+    background: var(--Neutral-02, #F1F4F4);
+    padding: 60px;
+    p{
+        color: #686A6C;
+        @extend %def-p2;
+    }
+    .card-box{
+        position: relative;
+        overflow: hidden;
+        height: 280px;
+        padding: 24px;
+        border-radius: 20px;
+        .F1{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            left: 0%;
+            top: 0%;
+            position: absolute;
+        }
+        .l1{
+            @include Flexible($justify:space-between);
+            button{
+                width: 94px;
+                height: 38px;
+                border: none;
+                border-radius: 12px;
+                background: var(--Neutral-01, #F7FBFA);
+                z-index: 1;
+                @extend %def-p2;
+            }
+            .pic{
+                object-fit: cover;
+                z-index: 1;
+                border-radius: 12px;
+                width: 86px;
+                height: 86px;
+            }
+        }
+    }
+    .under{
+        margin-top: 20px;
+        @extend %def-p;
+        @include Flexible($justify:space-between);
+        p{
+            color: #A6AEAD;
+        }
+        span{
+            color: #202025;
+            @include Texting($size:32px,$weight:800px,$height:40px,$spacing:-0.64px);
+        }
+    }
+}

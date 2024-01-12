@@ -7,6 +7,7 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import './right.scss';
 import CollectionCard from './CollectionCard';
 import CreatedCard from './CreatedCard';
+import { Link } from 'react-router-dom';
 
 
 const ProfileRight = () => {
@@ -62,13 +63,15 @@ const { delta } = useQuery({
           }
         {selectedCardType === 'CreatedCard' && data &&
           data.map((createdData, index) => (
-            <div className="col-xl-6 carding" key={index}>
-              <CreatedCard
-                name={createdData.name}
-                image={createdData.image}
-                price={createdData.price}
-              />
-            </div>
+              <div className="col-xl-6 carding" key={index}>
+                <Link to={`/profilenftdetail/${createdData._id}`}>
+                <CreatedCard
+                  name={createdData.name}
+                  image={createdData.image}
+                  price={createdData.price}
+                />
+                </Link>
+              </div>
           ))
         }
         </div>

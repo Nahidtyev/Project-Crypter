@@ -1,0 +1,42 @@
+@use '../../../styled/mixin.scss' as *;
+@use '../../../styled/extend.scss' as *;
+#nfts{
+    padding: 60px ;
+    .heading{
+        @include Flexible($justify:space-between,$align:start);
+        h1{
+            @extend %headed;
+            margin-bottom: 0px;
+        }
+        span{
+            button{
+                border-radius: 60px;
+                border: 2px solid var(--neutral-03, #E1E2E2);
+                padding: 18px;
+                height: max-content;
+                background-color: #E1E2E2;
+            }
+            button:nth-child(2){
+                background-color: #202025;
+                margin-left: 12px
+            }
+        }
+        .filters{
+            @include Flexible($align:end);
+            button{
+                @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+                color: #686A6C;
+                background-color: transparent;
+                border: none;
+                padding: 8px 24px;
+                border-radius: 40px;
+                transition: background-color 0.3s, color 0.3s; /* 0.3 saniyə tranzisiya effekti */
+                cursor: pointer;
+            }
+            button.active {
+                background-color: #000000;
+                color: rgb(235, 235, 235);
+            }
+        }
+    }
+}

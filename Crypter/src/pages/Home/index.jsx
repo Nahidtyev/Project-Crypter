@@ -5,6 +5,8 @@ import Dream from './Dream'
 import Soon from './Soon'
 import Creativity from './Creativity'
 import Collections from './Collections'
+import Spotlight from './Spotlight'
+import Artists from './Artists'
 
 const Home = () => {
   return (
@@ -12,9 +14,11 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <Artwork/>
+          <Artists/>
           <Dream/>
           <Collections/>
           <Soon/>
+          <Spotlight/>
           <Creativity/>
           <News/>
         </div>

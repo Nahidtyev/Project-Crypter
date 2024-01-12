@@ -1,0 +1,26 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+.share-right{
+    text-align: left;
+    padding-top: 40px;
+    margin-left: 40px;
+    h1{
+        margin-top: 30px;
+        @extend %headed;
+    }
+    p{
+        color: #686A6C;
+        @extend %def-p2;
+    }
+    .media{
+        cursor: pointer;
+        width: max-content;
+        padding: 80px 128px;
+        border-right: 1px solid var(--Neutral-03, #E1E2E2);
+        border-bottom: 1px solid var(--Neutral-03, #E1E2E2);
+        &:hover{
+            box-shadow: 0px 32px 48px -16px rgba(0, 0, 0, 0.10);
+        }
+    }
+}

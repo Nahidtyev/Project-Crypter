@@ -1,0 +1,76 @@
+@use '../../../../styled/mixin.scss' as *;
+@use '../../../../styled/extend.scss' as *;
+
+.most-card{
+    padding: 8px;
+    padding-left: 0;
+    transition: 0.35s;
+    border-radius: 32px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    .arts{
+        margin-bottom: 28px;
+        @include Flexible($gap:8px,$align:center);
+        .right{
+            @include Flexible($gap:8px);
+            .smaller{
+                min-width: 140px;
+                height: 110px;
+            }
+            .idle{
+                border-radius: 16px;
+                background-color: #B9A9FB;
+            }
+        }
+        img{
+            object-fit: cover;
+            border-radius: 16px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;            
+        }
+        .bigger{
+            height: 350px;
+        }
+    }
+    .lower{
+        @include Flexible($justify:space-between);
+        h6{
+            color: #202025;
+            @include Texting($size:24px,$weight:700,$height:32px,$spacing:-0.48px)
+        }
+        img{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 12px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        }
+        p{
+            @extend %def-p;
+            color: #202025
+        }
+        span{
+            @extend %def-p;
+            color: #686A6C;
+            @include Flexible()
+        }
+        .prc{
+            font-size: 28px;
+        }
+    }
+    &:hover{
+        background: var(--Neutral-07, #202025);
+        border: 1px solid var(--Neutral-03, #E1E2E2);
+    }
+    &:hover h6{
+        color: var(--Neutral-01, #F7FBFA);
+    }
+    &:hover p{
+        color: var(--Neutral-01, #F7FBFA);
+    }
+    &:hover .prc{
+        background: var(--Gradient-01, conic-gradient(from 180deg at 50% 50%, #FFE249 22.225085645914078deg, #F35950 78.13612282276154deg, #7C5BFF 158.9999771118164deg, #1CE4FF 202.3224377632141deg, #5FFF5C 341.3397216796875deg));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

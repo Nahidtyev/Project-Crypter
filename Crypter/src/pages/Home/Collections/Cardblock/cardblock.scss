@@ -2,7 +2,11 @@
 @use '../../../../styled/extend.scss' as *;
 
 .card-block{
+    .container {
+        padding: 0;
+    };
     .arts{
+        margin-bottom: 28px;
         @include Flexible($gap:8px);
         img{
             object-fit: cover;
@@ -10,8 +14,22 @@
             background: url(<path-to-image>), lightgray 50% / cover no-repeat;            
         }
         img:first-child{
-            width: 400px;
-            height: 400px;
+            width: 350px;
+            height: 350px;
+        }
+        img:nth-child(2){
+            width: 110px;
+            height: 110px;
+        }
+        img:nth-child(3){
+            width: 110px;
+            height: 110px;
+        }
+        .idle{
+            width: 110px;
+            height: 110px;
+            border-radius: 16px;
+            background-color: rgb(231, 204, 134);
         }
     }
     .lower{

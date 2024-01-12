@@ -1,0 +1,29 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+.mint-card{
+    margin-bottom: 50px;
+    @include Flexible($justify:space-between,$align:center);
+    padding: 20px 40px 20px 20px;
+    border-radius: 20px;
+    background: var(--Neutral-01, #F7FBFA);
+    box-shadow: 0px 32px 48px -16px rgba(0, 0, 0, 0.10);
+    div{
+        @include Flexible();
+        img{
+            margin-right: 15px;
+            width: 86px;
+            height: 86px;
+            border-radius: 16px;
+            background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        }
+        p{
+            @extend %def-p2;
+            span{
+                color: #A6AEAD;
+                font-size: 20px;
+                letter-spacing: -0.4px;
+            }
+        }
+    }
+}

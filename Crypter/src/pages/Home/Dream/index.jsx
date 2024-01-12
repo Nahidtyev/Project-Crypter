@@ -3,6 +3,7 @@ import './dream.scss'
 import img2 from '../../../assets/home/img2.png'
 import ast from '../../../assets/home/ast.png'
 import img from '../../../assets/home/img.png'
+import { Link } from 'react-router-dom'
 const Dream = () => {
   return (
     <div id="dream">
@@ -13,7 +14,8 @@ const Dream = () => {
                         <span>
                             <button>
                                 <img src={ast} alt="" />
-                                @randomdash</button>
+                                @randomdash
+                            </button>
                             <button>
                                 <img id='vaz' src={img} alt="" />
                                 Escape
@@ -26,7 +28,7 @@ const Dream = () => {
                                 <h5>8.00 ETH</h5>
                                 <p>$24,635.39</p>
                             </div>
-                            <button>MAKE OFFER</button>
+                            <button><Link to={'/mint'}>MAKE OFFER</Link></button>
                         </div>
                     </div>
                 </div>

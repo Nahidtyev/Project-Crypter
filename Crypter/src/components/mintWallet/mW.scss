@@ -1,0 +1,22 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.mint-wallet{
+    background: var(--Neutral-01, #F7FBFA);
+    padding: 60px;
+    height: 100%;
+    @include Flexible($direction:column,$justify:space-between);
+    position: relative;
+    .back{
+        @extend %backbtn;
+    }
+    .top{
+        @extend %topped;
+    }
+    .submit{
+        width: 100%;
+        @extend %btn;
+        background-color: #202025;
+        color: #F7FBFA;
+    }
+}

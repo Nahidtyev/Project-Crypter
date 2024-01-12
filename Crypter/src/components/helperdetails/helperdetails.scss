@@ -1,0 +1,41 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.helper-details{
+    padding: 60px;
+    .left{
+        height: 100%;
+        margin-right: 50px;
+        padding: 60px ;
+        border-radius: 24px;
+    }
+    .guide{
+        background: linear-gradient(136deg, #FFE70F 1.16%, #FFC179 22.02%, #FF774C 59.98%, #EF2DD0 102.39%);
+    }
+    .bid{
+        background: linear-gradient(138deg, #8DE4FF 1.33%, #3062C2 46.68%, #8230C2 106.2%);
+    }
+    .buy{
+        background: linear-gradient(138deg, #BF8DFF 1.33%, #72EEFF 46.68%, #30C250 106.2%);
+    }
+    .right{
+        h1{
+            @extend %def-h5;
+            color: #202025;
+            margin-bottom: 30px
+        }
+        p{
+            @extend %def-ptexting;
+            margin-bottom: 30px
+        }    
+    }
+    .related{
+        margin-top: 60px;
+        padding: 108px 60px;
+        background: var(--Neutral-02, #F1F4F4);
+        h1{
+            @extend %headed;
+        }
+    }
+
+}

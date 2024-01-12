@@ -1,0 +1,59 @@
+@use '../../../../styled/mixin.scss' as *;
+@use '../../../../styled/extend.scss' as *;
+
+.nfts-card{
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.35s ease;
+    border-radius: 24px;
+    img{
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    }
+    .fl{
+        margin-top: 10px;
+        @include Flexible($justify:space-between);
+        p{
+            color: #202025;
+            font-weight: 700;
+            margin: 0;
+            @extend %def-ptexting;
+        }
+
+    }
+    .lower{
+        @include Flexible($justify:space-between);
+        span{
+            @extend %def-plight;
+            color: #686A6C;
+            font-weight: 700;
+            p{
+                @extend %def-p2;
+                color: #202025;
+                margin: 0;
+            }
+        }
+        span:last-child{
+            text-align: right;
+        }
+    }
+    hr{
+        margin: 10px 0;
+    }
+    &:hover{
+        background: var(--Neutral-07, #202025);
+        p{
+            color: #F7FBFA;
+        }
+        span{
+            p{
+                color: #F7FBFA;
+            }
+        }
+        hr{
+            color: #555555;
+        }
+    }
+}

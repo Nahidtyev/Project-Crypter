@@ -1,0 +1,97 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+
+.pp-dropdown{
+    border-radius: 32px;
+    background: var(--Neutral-08, #010101);
+    padding: 55px 40px ;
+    z-index: 111111111;
+    .exit{
+        position: absolute;
+    }
+    .pp{
+        @include Flexible();
+        img{
+            object-fit: cover;
+            background-color: #F7FBFA;
+            border-radius: 80px;
+            width: 70px;
+            height: 70px;
+            margin-right: 15px;
+        }
+        .nm{
+            @include Texting($size:20px,$weight:700,$height:32px,$spacing:-0.4px);
+            color: var(--neutral-05, #686A6C);
+            p{
+                margin: 0;
+                color: #F7FBFA;
+                @extend %def-h5;
+            }
+        }
+    }
+    #wlt-link{
+        @extend %def-p;
+        @include Flexible($justify:space-between);
+        p{
+            color: #686A6C;
+        }
+        ul{
+            list-style: none;
+            li{
+                color: #F7FBFA;
+            }
+        }
+    }
+    .price{
+        padding: 28px 30px;
+        border-radius: 24px;
+        background: var(--opacity-0775, rgba(32, 32, 37, 0.75));
+        button{
+            @include Flexible($align:baseline);
+            @extend %def-plight;
+            color: #F7FBFA;
+            padding: 8px;
+            margin-bottom: 7px;
+            border-radius: 12px;
+            background: var(--opacity-0650, rgba(85, 85, 85, 0.25));
+            button{
+                margin-left: 10px;
+                padding: 6px;
+                border-radius: 16px;
+                background: var(--Accent-4, #DBFF73);
+            }
+        }
+        span{
+            @include Flexible($justify:space-between);
+            @extend %def-h5;
+            h1{
+                margin: 0;
+            }
+        }
+    }
+    .esy-links{
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+        @include Flexible($direction:column);
+        span:hover{
+            cursor: pointer;
+            background: var(--Gradient-01, conic-gradient(from 180deg at 50% 50%, #FFE249 22.225085645914078deg, #F35950 78.13612282276154deg, #7C5BFF 158.9999771118164deg, #1CE4FF 202.3224377632141deg, #5FFF5C 341.3397216796875deg));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        hr{
+            margin: 0;
+        }
+        div{
+            padding: 20px 10px;
+            @extend %def-h5;
+            font-size: 30px;
+            a{
+                width: 100%;
+                @include Flexible($justify:space-between);
+            }
+        }
+    }
+}

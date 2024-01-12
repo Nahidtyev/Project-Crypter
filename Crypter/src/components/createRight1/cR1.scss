@@ -1,0 +1,59 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.create-right1{
+    @include Flexible($direction:column,$gap:20px);
+    background: var(--Neutral-02, #F1F4F4);
+    padding: 60px;
+    .head{
+        @include Flexible($justify:space-between);
+        p{
+            @extend %def-p2;
+        }
+        button{
+            height: max-content;
+            border:  none;
+            border-radius: 12px;
+            background: var(--Neutral-03, #E1E2E2);
+            padding: 2px 12px;
+            @include Texting($size:20px,$weight:500,$height:32px,$spacing:-0.4px);
+        }
+    }
+    .create-btn{
+        @include Flexible($direction:column,$align:center);
+        padding: 46px 20px;
+        border-radius: 20px;
+        background: var(--Neutral-01, #F7FBFA);
+        box-shadow: 0px 32px 48px -16px rgba(0, 0, 0, 0.10);
+        button{
+            width: max-content;
+            margin-bottom: 25px;
+            font-size: 32px;
+            color: #202025;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 16px;
+            background: var(--opacity-0350, rgba(225, 226, 226, 0.50));
+        }
+        span{
+            @extend %def-p2;
+        }
+        p{
+            @extend %def-plight;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+    .empty-item{
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--Neutral-01, #F7FBFA);
+        button{
+            margin-right: 15px;
+            padding: 25px;
+            border: none;
+            border-radius: 16px;
+            background: var(--opacity-0350, rgba(225, 226, 226, 0.50));
+        }
+    }
+}

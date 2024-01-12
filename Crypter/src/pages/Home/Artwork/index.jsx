@@ -3,6 +3,7 @@ import graphic from '../../../assets/home/graphic.png'
 import img from '../../../assets/home/img.png'
 import {LiaDotCircle} from 'react-icons/lia'
 import {BiRightArrowAlt} from 'react-icons/bi'
+import {Link} from 'react-router-dom'
 import './artwork.scss'
 
 const Artwork = () => {
@@ -49,8 +50,8 @@ const Artwork = () => {
                   <h1>The creator network.</h1>
                   <div>
                     <span>
-                      <button>View NFT <BiRightArrowAlt size={24}/></button>
-                      <button>place a bid</button>
+                      <button><Link to={'/profile'}>View NFT <BiRightArrowAlt size={24}/></Link></button>
+                      <button><Link to={'/create'}>place a bid</Link></button>
                     </span>
                   </div>
                 </div>

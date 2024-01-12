@@ -2,6 +2,7 @@ import React from 'react'
 import './sign.scss';
 import logo from '../../assets/Wallet/logo.png'
 import {FiArrowRight} from 'react-icons/fi'
+import { Link } from 'react-router-dom';
 
 const WalletSign = () => {
   return (
@@ -11,11 +12,11 @@ const WalletSign = () => {
         <p>Crypter uses this signature to verify that you’re the ownerof this Ethereum address.</p>
         <span className='w-100'>
             <button>disconnect</button>
-            <button>continue</button>
+            <button><Link to={'/walletscanqr'}>continue</Link></button>
         </span>
         <div>
             <span>New to Ethereum?</span>
-            <span>Learn about wallet <FiArrowRight size={24}/></span>
+            <span><Link to={'/wallet'}>Learn about wallet <FiArrowRight size={24}/></Link></span>
         </div>
     </div>
   )

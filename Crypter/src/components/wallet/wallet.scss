@@ -37,8 +37,13 @@
                     img{
                         margin-right: 20px;
                     }
+                    &:hover{
+                        background-color: #202025;
+                        border-color: var(--gradient-01, conic-gradient(from 180deg at 50% 50%, #FFE249 22.225085645914078deg, #F35950 78.13612282276154deg, #7C5BFF 158.9999771118164deg, #1CE4FF 202.3224377632141deg, #5FFF5C 341.3397216796875deg));
+                    }
                 }
             }
+
         }
         .scan-link{
             @include Flexible($justify:center);

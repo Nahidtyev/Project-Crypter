@@ -1,0 +1,61 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+
+.settings-left{
+    height: 100%;
+    background: var(--Neutral-02, #F1F4F4);
+    padding: 40px;
+    span{
+        @include Flexible($justify:space-between);
+        h1{
+            @extend %headed;
+        }
+        button{
+            padding: 18px 36px;
+            background-color: #202025;
+            color: #F1F4F4;
+            @extend %btn;
+        }
+    }
+    ul{
+        margin-top: 30px;
+        margin-bottom: 40px;
+        padding: 0;
+        list-style: none;
+        li{
+            padding: 40px 40px;
+            color: #686A6C;
+            @include Flexible($justify:space-between,$align:center);
+            p{
+                @include Texting($size:32px,$weight:800px,$height:40px,$spacing:-0.64px);
+            }
+            &:hover{
+                border-radius: 20px;
+                background: var(--Neutral-01, #F7FBFA);
+                box-shadow: 0px 12px 40px -16px rgba(0, 0, 0, 0.05);
+                color: #202025;
+            }
+        }
+    }
+    .pp{
+        @include Flexible();
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 32px;
+            border: 12px solid rgba(247, 251, 250, 0.25);
+            background: url(<path-to-image>), lightgray -14.775px -14.775px / 133.612% 133.612% no-repeat, #BDC4C4;
+        }
+        p{
+            @include Texting($size:32px,$weight:800px,$height:40px,$spacing:-0.64px);
+            span{
+                @extend %def-plight;
+                max-width: 240px;
+            }
+            button{
+                padding: 12px 32px;
+                @extend %btn;
+            }
+        }
+    }
+}

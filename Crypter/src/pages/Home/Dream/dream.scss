@@ -3,9 +3,7 @@
 
 #dream{
     @include Flexible($align:center);
-    .col-xl-6{
-        padding: 0;
-    }
+    padding: 0;
     .left{
         height: 100%;
         padding: 110px 0 110px 80px;
@@ -17,10 +15,7 @@
                 background: var(--neutral-07, #202025);
                 padding: 12px;
                 color: var(--neutral-01, #F7FBFA);
-                font-size: 18px;
-                font-weight: 700;
-                line-height: 36px; /* 200% */
-                letter-spacing: -0.18px;
+                @extend %def-p;
                 border: none;
                 img{
                     background-color: #A6AEAD;
@@ -49,18 +44,10 @@
             .text{
                 p{
                     margin: 0;
-                    color: var(--neutral-04, #A6AEAD);
-                    font-size: 18px;
-                    font-weight: 700;
-                    line-height: 36px; /* 200% */
-                    letter-spacing: -0.18px;
+                    @extend %def-p;
                 }
                 h5{
-                    color: var(--neutral-01, #F7FBFA);
-                    font-size: 48px;
-                    font-weight: 800;
-                    line-height: 48px; /* 100% */
-                    letter-spacing: -0.96px;
+                    @extend %def-h5;
                 }
             }
             button{

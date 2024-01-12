@@ -5,6 +5,7 @@ import group from '../../assets/Wallet/Group.png'
 import coin from '../../assets/Wallet/Coinbase-dapp-wallet-logo 1.png'
 import icon from '../../assets/Wallet/icon192.png'
 import {LiaDotCircleSolid} from 'react-icons/lia'
+import {Link} from 'react-router-dom'
 import Cookie from '../cookie'
 const Wallet = () => {
   return (
@@ -25,7 +26,7 @@ const Wallet = () => {
             </ul>
             <div className='scan-link'>
                 <LiaDotCircleSolid size={24}/>
-                <span>Scan to connect</span>
+                <Link to={'/walletscanqr'}><span>Scan to connect</span></Link>
             </div>
         </div>
         <Cookie/>

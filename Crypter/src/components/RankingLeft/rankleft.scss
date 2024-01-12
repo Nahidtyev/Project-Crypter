@@ -1,0 +1,22 @@
+@use '../../styled/extend.scss' as *;
+@use '../../styled/mixin.scss' as *;
+.ranking-left{
+    height: 100%;
+    background-color: #F7FBFA                                                                                                                                                                                                                                                     ;
+    padding: 60px;
+    @include Flexible($justify:space-between,$direction:column);
+    h1{
+        @extend %headed;
+        span{
+            color: #686A6C;
+        }
+    }
+    .bottom{
+        @include Flexible($justify:space-between);
+        input{
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+    }
+}

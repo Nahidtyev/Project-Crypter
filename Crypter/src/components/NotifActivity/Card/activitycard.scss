@@ -1,0 +1,57 @@
+ @use '../../../styled/extend.scss' as *;
+ @use '../../../styled/mixin.scss' as *;
+
+.activity-card{
+    padding: 40px !important ;
+    border-radius: 24px;
+    background: var(--Neutral-07, #202025);
+    box-shadow: 0px 40px 48px -24px rgba(0, 0, 0, 0.10);
+    .pp{
+        margin-bottom: 20px;
+        @include Flexible($justify:space-between);
+        .pp1{
+            @include Flexible($gap:20px,$align:center);
+            img{
+                background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+                border-radius: 80px;
+                border: 1px solid var(--gradient-01, #FFE249);
+                width: 80px;
+                height: 80px;
+                padding: 4px;
+            }
+            .nm{
+                color: var(--neutral-05, #686A6C);
+                @include Texting($size:16px,$weight:700,$height:24px,$spacing:-0.16px);
+                span{
+                    color: #F7FBFA;
+                    @include Texting($size:20px,$weight:700,$height:32px,$spacing:-0.48px);
+                }
+            }
+        }
+    }
+    p{
+        margin: 0;
+        color: #686A6C;
+        @extend %def-plight;
+    }
+    .offer{
+        color: #686A6C;
+        @extend %def-p;
+    }
+    ul{
+        padding: 0;
+        list-style: none;
+        color: #F7FBFA;
+        li{
+            @include Flexible($justify:space-between);
+        }
+        li:first-child{
+            @extend %def-h5
+        }
+    }
+    button{
+        margin-top: 40px;
+        width: 100%;
+        @extend %btn;
+    }
+}

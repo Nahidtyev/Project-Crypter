@@ -1,0 +1,67 @@
+@use '../../../../styled/extend.scss' as *;
+@use '../../../../styled/mixin.scss' as *;
+.artist-card{
+    padding: 24px;
+    border-right: 1px solid var(--neutral-03, #E1E2E2);
+    border-bottom: 1px solid var(--neutral-03, #E1E2E2);
+    background-color: #f1f4f4;
+    color: #202025;
+    @include Flexible($justify:center,$align:center,$direction:column);
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover{
+        background: var(--neutral-01, #F7FBFA);
+        box-shadow: 0px 62px 48px -16px rgba(0, 0, 0, 0.40);
+    }
+    &:hover .num button p{
+        color: #000000;
+    }
+    .num{
+        width: 100%;
+        @include Flexible($justify:end);
+        button{
+            padding: 20px;
+            border: none;
+            background: transparent;
+            @extend %def-plight;
+            position: relative;
+            img{
+                position: absolute;
+                right: 0px;
+                top: 5px;
+                background: transparent;
+                width: 40px;
+                height: 40px;
+                fill: var(--neutral-01, #F7FBFA);
+                filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.06));
+            }
+            p{
+                margin: 0;
+                position: absolute;
+                z-index: 111;
+                top: 7px;
+                right:16px;
+                transition: 0.3s;
+            }
+        }
+    }
+    img{
+        background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+        width: 100x;
+        height: 100px;
+        border-radius: 120px;
+    }
+    h6{
+        margin: 0;
+        @extend %def-p2;
+    }
+    p{
+        color: #686A6C;
+        @extend %def-plight;
+        span{
+
+            color: #131316;
+        }
+    }
+}

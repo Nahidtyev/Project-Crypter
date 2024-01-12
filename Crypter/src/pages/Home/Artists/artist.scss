@@ -1,0 +1,39 @@
+@use '../../../styled/extend.scss' as *;
+@use '../../../styled/mixin.scss' as *;
+#artists{
+    .left{
+        height: 100%;
+        @include Flexible($justify:space-between);
+        padding: 80px;
+        .first{
+            @include Flexible();
+            h1{
+                @extend %headed;
+            }
+            button{
+                height: max-content;
+                padding: 28px;
+                border-radius: 80px;
+                border: 1px solid var(--neutral-02, #F1F4F4);
+                background: var(--neutral-01, #F7FBFA);
+                box-shadow: 0px 20px 16px -6px rgba(0, 0, 0, 0.15);
+            }
+        }
+        p{
+            @include Texting($size:20px,$weight:500px,$height:32px,$spacing:-0.4px);
+        }
+    }
+    .right{
+        .explore{
+            background: var(--neutral-02, #F1F4F4);
+            @include Flexible($justify:center);
+            padding: 80px;
+            button{
+                width: 95%;
+                @extend %btn;
+                background: var(--neutral-07, #202025);
+                color: var(--neutral-01, #F7FBFA);
+            }
+        }
+    }
+}
