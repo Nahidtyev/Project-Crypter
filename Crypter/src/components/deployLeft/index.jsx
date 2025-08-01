@@ -8,7 +8,7 @@ const Deployleft = () => {
   const [congrats, setCongrats] =useState(false);
   const handleCongrats = () => {
     setCongrats(!congrats);
-  };
+  }
   return (
     <div className="deploy-left">
         <Link to={'/create-2'}><button className='back'><GoArrowLeft size={24}/></button></Link>
