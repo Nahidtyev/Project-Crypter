@@ -1,0 +1,34 @@
+:root {
+  // Neutral colors
+  --neutral-01: #F7FBFA;
+  --Neutral-01: #F7FBFA;
+  --neutral-02: #F1F4F4;
+  --Neutral-02: #F1F4F4;
+  --neutral-03: #E1E2E2;
+  --Neutral-03: #E1E2E2;
+  --neutral-04: #A6AEAD;
+  --Neutral-04: #A6AEAD;
+  --neutral-05: #686A6C;
+  --Neutral-05: #686A6C;
+  --neutral-06: #555555;
+  --neutral-07: #202025;
+  --Neutral-07: #202025;
+  --neutral-08: #010101;
+  --Neutral-08: #010101;
+
+  // Accent colors
+  --Accent-1-shade-2: #1966F7;
+  --Accent-2: #B9A9FB;
+  --Accent-4: #DBFF73;
+
+  // Gradient
+  --gradient-01: conic-gradient(from 180deg at 50% 50%, #FFE249 22.225085645914078deg, #F35950 78.13612282276154deg, #7C5BFF 158.9999771118164deg, #1CE4FF 202.3224377632141deg, #5FFF5C 341.3397216796875deg);
+  --Gradient-01: conic-gradient(from 180deg at 50% 50%, #FFE249 22.225085645914078deg, #F35950 78.13612282276154deg, #7C5BFF 158.9999771118164deg, #1CE4FF 202.3224377632141deg, #5FFF5C 341.3397216796875deg);
+
+  // Opacity variants
+  --opacity-0150: rgba(247, 251, 250, 0.50);
+  --opacity-0350: rgba(225, 226, 226, 0.50);
+  --opacity-0650: rgba(85, 85, 85, 0.25);
+  --opacity-0750: rgba(32, 32, 37, 0.50);
+  --opacity-0775: rgba(32, 32, 37, 0.75);
+}
