@@ -1,4 +1,5 @@
-import {createBrowserRouter} from "react-router-dom";
+//import {createBrowserRouter} from "react-router-dom";
+import {createHashRouter} from "react-router-dom";
 import Layout from "./src/features/Layout";
 import Home from "./src/pages/Home";
 import Connectwallet from "./src/pages/Connectwallet/Connect";
@@ -24,7 +25,7 @@ import Discover from "./src/pages/Discover";
 import Ranking from "./src/pages/Ranking";
 import ProfileNftDetail from "./src/pages/ProfileCards/ProfileNftDetail";
 
-export const routers = createBrowserRouter([
+export const routers = createHashRouter([
     {
         element:<Layout/>,
         children:[
